@@ -1,0 +1,179 @@
+.popup{
+display: none;
+width: 100%;
+height: 100vh;
+position: fixed;
+justify-content: center;
+align-items: center;
+top: 0;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup__opened{
+display:flex;
+}
+
+.popup__container{
+  width: 430px;
+  height: 330px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.popup__close-button{
+position: absolute;
+right: -43px;
+top:-38px;
+border: none;
+background: transparent;
+}
+
+.popup__close-button:hover{
+opacity: 60%;
+}
+
+.popup__title{
+color: black;
+width: 330px;
+height: 23px;
+font-family: 'Inter';
+font-weight: 900;
+font-size: 24px;
+line-height: 29px;
+margin-left: 36px;
+margin-top: 34px;
+}
+
+.popup__form{
+width: 360px;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+box-sizing: border-box;
+align-self: center;
+}
+
+.popup__name{
+width: 358px;
+height: 27.3px;
+width: 100%;
+border: none;
+border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.popup__name::placeholder{
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #C4C4C4;
+}
+
+.popup__acerca{
+width: 358px;
+height: 27.3px;
+width: 100%;
+margin-top: 29.7px;
+border: none;
+border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.popup__acerca::placeholder{
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #C4C4C4;
+}
+
+.popup__save-button{
+width: 358px;
+height: 50.1px;
+margin-top: 48px;
+background-color: white;
+border: 1px solid rgba(0, 0, 0, 0.2);
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+color: #C4C4C4;
+}
+
+.popup__save-button_active{
+background-color: black;
+color: white;
+}
+
+.popup__save-button_active:hover{
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 880px){
+
+.popup__container{
+width: 88vw;
+max-width: 430px;
+height: 322px;
+}
+
+.popup__title{
+font-size: 18px;
+}
+
+.popup__form{
+width: 74vw;
+max-width: 358px;
+}
+
+
+form{
+width: 74vw;
+max-width: 358px;
+align-items: flex-end;
+justify-content: center;
+}
+
+.popup__name{
+width: 74vw;
+max-width: 358px;
+height: 26px;
+}
+
+.popup__acerca{
+width: 74vw;
+max-width: 358px;
+height: 26px;
+}
+
+.popup__save-button{
+width: 74vw;
+max-width: 358px;
+height: 46px;
+margin-top: 46px;
+font-size: 14px;
+
+}
+
+}
+
+
+@media screen and (max-width: 550px){
+
+.popup__close-button{
+right: 0;
+top:-55px;
+}
+
+.popup__close-image{
+width: 26px;
+height: 26px;
+}
+
+}
+
+
+
