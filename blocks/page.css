@@ -2,6 +2,7 @@
 background-color: black;
 color: #FFFFFF;
 min-width: 320px;
+height: 100vh;
 overflow-x: hidden;
 box-sizing: border-box;
 align-content: center;

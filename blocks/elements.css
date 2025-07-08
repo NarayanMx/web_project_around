@@ -76,12 +76,19 @@ border: none;
 background: transparent;
 }
 
-.elements__like-button_hidden{
+.elements__button-hidden{
 display: none;
 }
 
-.elements__black-button_hidden{
-display: none;
+.elements__trash-button{
+position: absolute;
+width: 18px;
+height: 19px;
+padding: 0;
+right: 15px;
+top: 18px;
+border: none;
+background: transparent;
 }
 
 
