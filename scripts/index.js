@@ -164,5 +164,26 @@ dataImg.addEventListener("submit", (event) => {
 
 
 
+/*Cerrar los popup al hacer click fuera de ellos*/
+
+popup.addEventListener('click', (event) => {
+  if (event.target === event.currentTarget) {
+    popup.classList.remove('popup__opened');
+  }
+});
+
+popupImg.addEventListener('click', (event) => {
+  if (event.target === event.currentTarget) {
+    popupImg.classList.remove('popupImg__opened');
+  }
+});
 
 
+/*Cerrar los popup al presionar Esc fuera de ellos*/
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === "Escape") {
+    popup.classList.remove('popup__opened');
+    popupImg.classList.remove('popupImg__opened');
+    }
+});
