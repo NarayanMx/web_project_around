@@ -101,7 +101,7 @@ imageDisplayClose.addEventListener("click", () => {
 
 
 /*Función para activar o desactivar Style del botón gurdar*/
-
+/*
 function verificartexto () {
 let textoActivo = Array.from(texto).some(input => input.value !=="")
 
@@ -117,7 +117,7 @@ texto.forEach(input => {
   input.addEventListener("input", verificartexto);
 });
 
-
+*/
 /*Funcionalidad de los botones del popup profile*/
 
 

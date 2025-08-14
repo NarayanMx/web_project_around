@@ -33,9 +33,11 @@ function enableValidation(config) {
 
     if (formIsValid) {
       submitButton.classList.remove(config.inactiveButtonClass);
-      submitButton.disabled = false;
+      submitButton.classList.add("popupImg__save-button");
+            submitButton.disabled = false;
     } else {
       submitButton.classList.add(config.inactiveButtonClass);
+submitButton.classList.remove("popupImg__save-button");
       submitButton.disabled = true;
     }
   }
