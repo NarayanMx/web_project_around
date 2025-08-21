@@ -15,7 +15,7 @@ display:flex;
 
 .popup__container{
   width: 430px;
-  height: 330px;
+  height: auto;
   border-radius: 10px;
   background-color: white;
   display: flex;
@@ -56,6 +56,10 @@ box-sizing: border-box;
 align-self: center;
 }
 
+.popup__field{
+position: relative;
+}
+
 .popup__name{
 width: 358px;
 height: 27.3px;
@@ -94,22 +98,17 @@ font-size: 14px;
 line-height: 17px;
 color: #C4C4C4;
 }
-/*
-.popup__input-error{
-max-width: 358px;
-width: 74vw;
-}*/
 
 .popup__input_type_error{
 border-bottom: 1px solid #FF0000;
 }
-
 
 .popup__save-button{
 width: 74vw;
 max-width: 358px;
 height: 50.1px;
 margin-top: 48px;
+margin-top: 36px;
 background-color: rgb(0, 0, 0);
 border: 1px solid rgba(0, 0, 0, 0.2);
 font-family: 'Inter', sans-serif;
@@ -133,6 +132,7 @@ background-color: rgba(0, 0, 0, 0.8);
 width: 358px;
 height: 50.1px;
 margin-top: 48px;
+margin-bottom: 36px;
 background-color: white;
 border: 1px solid #CCCCCC;
 font-family: 'Inter', sans-serif;
@@ -143,25 +143,17 @@ text-align: center;
 color: #CCCCCC;
 }
 
-
-.popup__field{
-position: relative;
-}
-
-
-
-
 .popup__error_visible{
-position: absolute;
+position: relative;
+padding: 1px;
 max-width: 358px;
-width: 74vw;
+
+height: auto;
 margin-top: 7px;
 font-family: 'Inter', sans-serif;
 font-weight: 400;
 font-size: 12px;
 color: red;
-
-
 }
 
 @media screen and (max-width: 880px){
@@ -169,11 +161,12 @@ color: red;
 .popup__container{
 width: 88vw;
 max-width: 430px;
-height: 322px;
+height: auto;
 }
 
 .popup__title{
 font-size: 18px;
+width: 40vw;
 }
 
 .popup__limit{
@@ -181,14 +174,20 @@ width: 74vw;
 max-width: 358px;
 }
 
-form{
+.popup__form{
 width: 74vw;
 max-width: 358px;
+height: auto;
+display: flex;
+flex-direction: column;
 align-items: flex-end;
 justify-content: center;
 }
 
-
+.popup__field{
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 .popup__name{
 width: 74vw;
@@ -200,12 +199,14 @@ height: 26px;
 width: 74vw;
 max-width: 358px;
 height: 26px;
+margin-top: 30px;
 }
 
 .popup__save-button{
 width: 74vw;
 height: 46px;
-margin-top: 46px;
+margin-top: 24px;
+margin-top: 24px;
 font-size: 14px;
 }
 
@@ -213,8 +214,9 @@ font-size: 14px;
 width: 74vw;
 max-width: 358px;
 height: 46px;
-margin-top: 46px;
 font-size: 14px;
+margin-top: 24px;
+margin-top: 24px;
 }
 
 

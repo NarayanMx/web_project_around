@@ -69,11 +69,6 @@
 
           <p class="popup__title">Editar perfil</p>
 
-
-
-
-
-
           <div class="popup__limit">
             <form class="popup__form">
               <label class="popup__field">
@@ -110,7 +105,6 @@
         </div>
       </div>
 
-
       <div class="popupImg">
         <div class="popupImg__container">
           <button class="popupImg__close-button">
@@ -122,10 +116,11 @@
           </button>
 
           <p class="popupImg__title">Nuevo lugar</p>
-          <div class="popupImg__form">
-            <form class="popup__form">
 
-              <label class="popup__field">
+          <div class="popupImg__limit">
+            <form class="popupImg__form popup__form">
+
+              <label class="popupImg__field">
               <input
                 type="text"
                 name="Título"
@@ -139,7 +134,7 @@
               <span class="popup__input-error" id="title-input-error"></span>
               </label>
 
-              <label class="popup__field">
+              <label class="popupImg__field">
               <input
                 type="url"
                 name="url"
@@ -149,13 +144,7 @@
                 required
               />
               <span class="popup__input-error" id="url-input-error"></span>
-
-
               </label>
-
-
-
-
 
               <button type="submit" class="popupImg__save-button popup__button">Guardar</button>
             </form>
@@ -184,9 +173,6 @@
 </div>
 </template>
 
-
-
-
           <div class="display__container">
 
           <div class="display__frame">
@@ -199,7 +185,6 @@
 
           </div>
 
-    <script src="./scripts/validate.js"></script>
-    <script src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
