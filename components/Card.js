@@ -1,23 +1,27 @@
 export class Card {
-  constructor(name, link, templateSelector, handleImageClick) {
+  constructor(name, link, templateSelector, handleCardClick) {
     this._name = name;
     this._link = link;
     this._templateSelector = templateSelector;
-    this._handleImageClick = handleImageClick;
+    this._handleCardClick = handleCardClick;
   }
 
   //Plantilla (privado)
 _getTemplate() {
-    return document
-    .querySelector(this._templateSelector)
-    .content
-    .querySelector(".template__frame")
-    .cloneNode(true);
+    const cardElement = document
+      .querySelector(this._templateSelector)
+      .content
+      .querySelector(".template__frame")
+      .cloneNode(true);
+
+    return cardElement;
     }
 
     //Eventos (privdo)
   _setEventListeners() {
-    this._image.addEventListener("click", () => this._handleImageClick(this._name, this._link));
+  this._image.addEventListener("click", () => {
+      this._handleCardClick(this._name, this._link);
+    });
 
     this._likeButton.addEventListener("click", () => {
       this._likeButton.classList.toggle("elements__button-hidden");
@@ -39,14 +43,14 @@ generateCard() {
     this._element = this._getTemplate();
 
     //Rellenarlo
-    this._image = this._element.querySelector(".elements__image");
-    this._likeButton = this._element.querySelector(".template__like-button");
-    this._likeButtonOn = this._element.querySelector(".template__black-button");
-    this._trashButton = this._element.querySelector(".template__trash-button");
-   this._text = this._element.querySelector(".elements__text");
-   this._text.textContent = this._name;
-    this._image.src = this._link;
-    this._image.alt = this._name;
+    this._image = this._element.querySelector(".elements__image");//
+    this._likeButton = this._element.querySelector(".template__like-button");//
+    this._likeButtonOn = this._element.querySelector(".template__black-button");//
+    this._trashButton = this._element.querySelector(".template__trash-button");//
+   this._text = this._element.querySelector(".elements__text");//
+   this._text.textContent = this._name; //
+    this._image.src = this._link;//
+    this._image.alt = this._name;//
 
     //Ponerle sus clases para estilo
     this._element.classList.add("elements__frame");

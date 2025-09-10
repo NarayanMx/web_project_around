@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.display_on {
+.display_on .popup__opened{
   display: flex;
   }
 
@@ -55,4 +55,8 @@ font-weight: 400;
 font-size: 12px;
 line-height: 15px;
 color: #FFFFFF;
+}
+
+.popup__opened{
+  display: flex
 }

@@ -1,15 +1,13 @@
+export function handleCardClick(name, link, popupInstance) {
 
-// Función del modal de la imagen
-export function handleImageClick(name, link) {
-const imageContainer = document.querySelector(".display__container");
-const imageDisplayImg = imageContainer.querySelector(".display__image");
-const imageDisplayText = imageContainer.querySelector(".display__text");
-const imageDisplayClose = imageContainer.querySelector(".display__close-button");
+  const img = document.querySelector(".display__image");
+  const text = document.querySelector(".display__text");
 
-imageDisplayImg.src = link;
-imageDisplayImg.alt = name;
-imageDisplayText.textContent = name;
-imageContainer.classList.add("display_on");
+  img.src = link;
+  img.alt = name;
+  text.textContent = name;
+
+  popupInstance.open({ name, link });
 }
 
 // Controladores de eventos
@@ -54,12 +52,15 @@ cerrar.addEventListener ("click", () => {
   popup.classList.remove("popup__opened");
 });
 
+
+/*
 guardar.addEventListener("click", (e) => {
   e.preventDefault();
   profile.textContent = nombre.value;
   role.textContent = acerca.value;
   popup.classList.remove("popup__opened");
 });
+*/
 
 /*Funcionalidad de los botones del popup Img*/
 addButton.addEventListener ("click", () => {
