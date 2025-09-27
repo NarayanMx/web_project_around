@@ -7,9 +7,34 @@ margin-right: auto;
 display: flex;
 }
 
+.profile__image-wrapper {
+position: relative;
+width: 120px;
+height: 120px;
+}
+
 .profile__image{
 width: 120px;
 height: 120px;
+border-radius: 50%;
+object-fit: cover;
+display: flex;
+}
+
+.profile__editButton{
+width: 26px;
+height: 26px;
+padding: 47px;
+border-radius: 50%;
+background-color: rgba(0, 0, 0, 0.5);
+position: absolute;
+top: 0;
+display: none;
+}
+
+
+.profile__image-wrapper:hover .profile__editButton {
+display: flex;
 }
 
 .profile__info{
@@ -76,6 +101,10 @@ justify-content: center;
 height: auto;
 }
 
+.profile__image-wrapper {
+align-self: center;
+}
+
 .profile__image{
 align-self: center;
 }
@@ -101,8 +130,8 @@ margin-top: 14px;
 }
 
 .profile__edit-button{
-top: 14px;
-right: 9px;
+top: 15px;
+right: -10px;
 border: none;
 }
 

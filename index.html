@@ -26,15 +26,24 @@
       </header>
 
       <section class="profile">
+         <div class="profile__image-wrapper">
         <img
           src="./images/Profile_pic.png"
           alt="Imagen de perfil"
           class="profile__image"
         />
 
+        <img
+          src="./images/editProfileButton.png"
+          alt="Botón de editar perfil"
+          class="profile__editButton"
+        />
+        </div>
+
+
         <div class="profile__info">
-          <h1 class="profile__name">Jacques Cousteau</h1>
-          <p class="profile__role">Explorador</p>
+          <h1 class="profile__name"></h1>
+          <p class="profile__role"></p>
           <button class="profile__edit-button">
             <img
               src="./images/Edit_Button.png"
@@ -57,7 +66,7 @@
 
       <footer class="footer">© 2025 Around The U.S.</footer>
 
-      <div class="popup">
+      <div class="popup">     <!--Popup Perfil -->
         <div class="popup__container">
           <button class="popup__close-button">
             <img
@@ -103,9 +112,9 @@
             </form>
           </div>
         </div>
-      </div>
+      </div>      <!--Popup Perfil -->
 
-      <div class="popupImg">
+      <div class="popupImg">      <!--Popup Imagen -->
         <div class="popupImg__container">
           <button class="popupImg__close-button popup__close-button">
             <img
@@ -150,7 +159,68 @@
             </form>
           </div>
         </div>
-      </div>
+      </div>      <!--Popup Imagen -->
+
+      <div class="popup popupDelete">     <!--Popup Borrar -->
+        <div class="popup__container">
+
+          <button class="popup__close-button">
+          <img
+          src="./images/Close_Icon.png"
+          alt="botón para cerrar popup"
+          class="popup__close-image"/>
+          </button>
+
+          <p class="popup__title">¿Estás seguro?</p>
+
+          <div class="popup__limit">
+            <form class="popup__form">
+              <label class="popup__field">
+              </label>
+
+              <button type="submit" class="popup__save-button popup__button">Si</button>
+            </form>
+          </div>
+
+        </div>
+      </div>      <!--Popup Borrar -->
+
+     <div class="popup popup__avatar">     <!--Popup Avatar -->
+        <div class="popup__container">
+          <button class="popup__close-button">
+            <img
+              src="./images/Close_Icon.png"
+              alt="botón para cerrar popup"
+              class="popup__close-image"
+            />
+          </button>
+
+          <p class="popup__title">Cambiar foto de perfil</p>
+
+          <div class="popupImg__limit">
+            <form class="popupImg__form popup__form">
+
+              <label class="popupImg__field">
+              <input
+                type="url"
+                name="url"
+                placeholder="Enlace a la imagen"
+                class="popupImg__url popup__input"
+                id="url-input"
+                required
+              />
+              <span class="popup__input-error" id="url-input-error"></span>
+              </label>
+
+              <button type="submit" class="popupImg__save-button popup__button">Guardar</button>
+            </form>
+          </div>
+        </div>
+      </div>      <!--Popup Avatar -->
+
+
+
+
     </div>
 
 

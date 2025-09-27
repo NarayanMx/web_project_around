@@ -19,6 +19,19 @@ formValues[input.name] = input.value;
 return formValues;
 }//Cierre del método getInputValues
 
+
+renderLoading(isLoading, loadingText = "Guardando...") {
+  const submitButton = this._form.querySelector('.popup__button');
+  if (isLoading) {
+    this._defaultButtonText = submitButton.textContent;
+    submitButton.textContent = loadingText;
+  } else {
+    submitButton.textContent = this._defaultButtonText;
+  }
+}
+
+
+
 setEventListeners(){
 super.setEventListeners();
 this._form.addEventListener("submit", (evt) => {
@@ -30,7 +43,6 @@ this._handleFormSubmit(this._getInputValues());
 close(){
 super.close();
 this._form.reset();
-this._popup.querySelector(".popupImg__container").classList.add("popupImg__container-close");
 }//Cierre del método close modificado
 
 

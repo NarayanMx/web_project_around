@@ -52,16 +52,6 @@ cerrar.addEventListener ("click", () => {
   popup.classList.remove("popup__opened");
 });
 
-
-/*
-guardar.addEventListener("click", (e) => {
-  e.preventDefault();
-  profile.textContent = nombre.value;
-  role.textContent = acerca.value;
-  popup.classList.remove("popup__opened");
-});
-*/
-
 /*Funcionalidad de los botones del popup Img*/
 addButton.addEventListener ("click", () => {
   popupImg.classList.add("popupImg__opened");

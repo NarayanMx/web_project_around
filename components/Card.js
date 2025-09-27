@@ -1,9 +1,13 @@
 export class Card {
-  constructor(name, link, templateSelector, handleCardClick) {
+  constructor(name, link, templateSelector, handleCardClick, isLiked, handleDeleteCard, _id, api) {
     this._name = name;
     this._link = link;
     this._templateSelector = templateSelector;
     this._handleCardClick = handleCardClick;
+    this._isLiked = isLiked;
+    this._handleDeleteCard = handleDeleteCard;
+    this._id = _id;
+    this._api = api;
   }
 
   //Plantilla (privado)
@@ -17,24 +21,46 @@ _getTemplate() {
     return cardElement;
     }
 
-    //Eventos (privdo)
-  _setEventListeners() {
-  this._image.addEventListener("click", () => {
-      this._handleCardClick(this._name, this._link);
-    });
+  //Revisar si tiene like la tarjeta
 
-    this._likeButton.addEventListener("click", () => {
-      this._likeButton.classList.toggle("elements__button-hidden");
-      this._likeButtonOn.classList.toggle("elements__button-hidden");
-    });
-
-    this._likeButtonOn.addEventListener("click", () => {
-      this._likeButton.classList.toggle("elements__button-hidden");
-      this._likeButtonOn.classList.toggle("elements__button-hidden");
-    });
-
-    this._trashButton.addEventListener("click", () => this._element.remove());
+_toggleLikeUI() {
+  if (this._isLiked) {
+    this._likeButton.classList.add("elements__button-hidden");
+    this._likeButtonOn.classList.remove("elements__button-hidden");
+  } else {
+    this._likeButton.classList.remove("elements__button-hidden");
+    this._likeButtonOn.classList.add("elements__button-hidden");
   }
+}
+
+    //Eventos (privdo)
+_setEventListeners() {
+  this._image.addEventListener("click", () => {
+    this._handleCardClick(this._name, this._link);
+  });
+
+
+
+  this._likeButton.addEventListener("click", () => {
+  this._api.likeCard(this._id)
+  .then(updateCard => {
+  this._isLiked = updateCard.isLiked;
+  this._toggleLikeUI();
+})
+  .catch(err => console.error("Error al dar like:", err));
+  });
+
+  this._likeButtonOn.addEventListener("click", () => {
+  this._api.unlikeCard(this._id)
+  .then(updateCard => {
+  this._isLiked = updateCard.isLiked;
+  this._toggleLikeUI();
+})
+  .catch(err => console.error("Error al quitar like:", err));
+  });
+
+    this._trashButton.addEventListener("click", () => this._handleDeleteCard(this._id, this._element));
+  }//Cierre del _setEventListeners
 
 //Crear tarjeta (método público)
 generateCard() {
@@ -62,6 +88,9 @@ generateCard() {
 
     //Agregarle los eventos
     this._setEventListeners();
+
+    //Actualizar el estado del like
+     this._toggleLikeUI();
 
     //Juntarlo todo y hacer la tarjeta
     return this._element;
