@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pagina de inicio del proyecto Around U.S."
+    />
+    <meta name="author" content="Narayan Bañuelos Torres" />
+    <meta name="keywords" content="around, u.s., fotos, viajes" />
+
+    <title>Around U.S.</title>
+
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="icon" href="./favico.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/Logo_white.png"
+          alt="Logo del proyecto Around US"
+          class="header__logo"
+        />
+      </header>
+
+      <section class="profile">
+         <div class="profile__image-wrapper">
+        <img
+          src="./images/Profile_pic.png"
+          alt="Imagen de perfil"
+          class="profile__image"
+        />
+
+        <img
+          src="./images/editProfileButton.png"
+          alt="Botón de editar perfil"
+          class="profile__editButton"
+        />
+        </div>
+
+
+        <div class="profile__info">
+          <h1 class="profile__name"></h1>
+          <p class="profile__role"></p>
+          <button class="profile__edit-button">
+            <img
+              src="./images/Edit_Button.png"
+              alt="botón para editar"
+              class="profile__edit-image"
+            />
+          </button>
+        </div>
+
+        <button class="profile__add-button">
+          <img src="./images/Add_Button.png" alt="botón para editar" />
+        </button>
+      </section>
+
+      <section class="elements">
+
+        <!--Todo se fue a JS :) -->
+
+      </section>
+
+      <footer class="footer">© 2025 Around The U.S.</footer>
+
+      <div class="popup">     <!--Popup Perfil -->
+        <div class="popup__container">
+          <button class="popup__close-button">
+            <img
+              src="./images/Close_Icon.png"
+              alt="botón para cerrar popup"
+              class="popup__close-image"
+            />
+          </button>
+
+          <p class="popup__title">Editar perfil</p>
+
+          <div class="popup__limit">
+            <form class="popup__form">
+              <label class="popup__field">
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Nombre"
+                class="popup__name popup__input"
+                minlength="2"
+                maxlength="40"
+                id="name-input"
+                required
+              />
+              <span class="popup__input-error" id="name-input-error"></span>
+              </label>
+
+              <label class="popup__field">
+              <input
+                type="text"
+                name="acerca"
+                placeholder="Acerca de mí"
+                class="popup__acerca popup__input"
+                minlength="2"
+                maxlength="200"
+                id="about-input"
+                required
+              />
+              <span class="popup__input-error" id="about-input-error"></span>
+              </label>
+
+              <button type="submit" class="popup__save-button popup__button">Guardar</button>
+            </form>
+          </div>
+        </div>
+      </div>      <!--Popup Perfil -->
+
+      <div class="popupImg">      <!--Popup Imagen -->
+        <div class="popupImg__container">
+          <button class="popupImg__close-button popup__close-button">
+            <img
+              src="./images/Close_Icon.png"
+              alt="botón para cerrar popup"
+              class="popupImg__close-image"
+            />
+          </button>
+
+          <p class="popupImg__title">Nuevo lugar</p>
+
+          <div class="popupImg__limit">
+            <form class="popupImg__form popup__form">
+
+              <label class="popupImg__field">
+              <input
+                type="text"
+                name="title"
+                placeholder="Título"
+                class="popupImg__ttl popup__input"
+                minlength="2"
+                maxlength="30"
+                id="title-input"
+                required
+              />
+              <span class="popup__input-error" id="title-input-error"></span>
+              </label>
+
+              <label class="popupImg__field">
+              <input
+                type="url"
+                name="url"
+                placeholder="Enlace a la imagen"
+                class="popupImg__url popup__input"
+                id="url-input"
+                required
+              />
+              <span class="popup__input-error" id="url-input-error"></span>
+              </label>
+
+              <button type="submit" class="popupImg__save-button popup__button">Guardar</button>
+            </form>
+          </div>
+        </div>
+      </div>      <!--Popup Imagen -->
+
+      <div class="popup popupDelete">     <!--Popup Borrar -->
+        <div class="popup__container">
+
+          <button class="popup__close-button">
+          <img
+          src="./images/Close_Icon.png"
+          alt="botón para cerrar popup"
+          class="popup__close-image"/>
+          </button>
+
+          <p class="popup__title">¿Estás seguro?</p>
+
+          <div class="popup__limit">
+            <form class="popup__form">
+              <label class="popup__field">
+              </label>
+
+              <button type="submit" class="popup__save-button popup__button">Si</button>
+            </form>
+          </div>
+
+        </div>
+      </div>      <!--Popup Borrar -->
+
+     <div class="popup popup__avatar">     <!--Popup Avatar -->
+        <div class="popup__container">
+          <button class="popup__close-button">
+            <img
+              src="./images/Close_Icon.png"
+              alt="botón para cerrar popup"
+              class="popup__close-image"
+            />
+          </button>
+
+          <p class="popup__title">Cambiar foto de perfil</p>
+
+          <div class="popupImg__limit">
+            <form class="popupImg__form popup__form">
+
+              <label class="popupImg__field">
+              <input
+                type="url"
+                name="url"
+                placeholder="Enlace a la imagen"
+                class="popupImg__url popup__input"
+                id="url-input"
+                required
+              />
+              <span class="popup__input-error" id="url-input-error"></span>
+              </label>
+
+              <button type="submit" class="popupImg__save-button popup__button">Guardar</button>
+            </form>
+          </div>
+        </div>
+      </div>      <!--Popup Avatar -->
+
+
+
+
+    </div>
+
+
+<template class="template">
+<div class="template__frame"> <!--clase en CSS class="elements__frame"-->
+          <img src="./images/place6.jpg" alt="Lago di Braies" class="elements__image"/>
+          <p class="elements__text">text</p>
+
+          <button class="template__trash-button">   <!--clase en CSS class="elements__trash-button"-->
+            <img src="./images/Trash_Button.png" alt="botón eliminar activado" />
+          </button>
+
+          <button class="template__black-button">    <!--clase en CSS class="elements__black-button"-->
+            <img src="./images/like_on.png" alt="botón me gusta activado" />
+          </button>
+
+          <button class="template__like-button">    <!--clase en CSS class="elements__like-button"-->
+            <img src="./images/like_off.jpg" alt="botón me gusta desactivado" />
+          </button>
+</div>
+</template>
+
+          <div class="display__container popup">
+
+          <div class="display__frame">
+            <img src="" alt="" class="display__image">
+            <p class="display__text"></p>
+            <button class="display__close-button popup__close-button">
+            <img src="./images/Close_Icon.png" alt="botón para cerrar popup" class="display__close-image"/>
+            </button>
+          </div>
+
+          </div>
+
+    <script type="module" src="./pages/index.js"></script>
+  </body>
+</html>
