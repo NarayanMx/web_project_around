@@ -6,4 +6,4 @@ Descripcion "Página principal del proyecto "Around de U.S."
 Tecnologias "Diseño responsivo con media-queries, flexbox y gid además de interacción con objetos del DOM usando JS"
 Autor Narayan Bañuelos
 
-Disponible en github pages https://narayanmx.github.io/web_project_around/
+Disponible en Github Pages! https://narayanmx.github.io/web_project_around/
